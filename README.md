@@ -4,8 +4,12 @@ Equibind score can extract different feature graphs from equibind, then can pass
 
 ### Setup Environment
 
+<<<<<<< HEAD
 We will set up the environment using [Anaconda](https://docs.anaconda.com/anaconda/install/index.html). Clone the
 current repo
+=======
+We will set up the environment using Anaconda.
+>>>>>>> 09092a8fe924da9ccff8dec94ceca6992eb3b678
 
 Create a new environment with all required packages using 'environment.yml'. If you have a CUDA GPU run:
 

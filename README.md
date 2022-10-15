@@ -44,6 +44,20 @@ tensorboard
 ### Get hidden layers
 Make sure you edit 'configs/get_layer.yml' to point towards the correct input and output folder, or specify the options via the command line. You can specify whether you want to extract the ligand graph, receptor graph, or both.
 
+As in put you need ligand files of the formats ``.mol2`` or ``.sdf`` or ``.pdbqt`` or ``.pdb`` whose names contain the string `ligand` (your ligand files should contain **all** hydrogens). \
+Receptor files of the format ``.pdb`` whose names contain the string `protein`. We ran [reduce](https://github.com/rlabduke/reduce) on our training proteins. Maybe you also want to run it on your protein.\
+For each complex you want to predict you need a directory containing the ligand and receptor file. Like this: 
+```
+my_data_folder
+└───name1
+    │   name1_protein.pdb
+    │   name1_ligand.sdf
+└───name2
+    │   name2_protein.pdb
+    │   name2_ligand.mol2
+...
+```
+
 Then run:
 
     python get_layer.py

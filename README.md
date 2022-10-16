@@ -1,6 +1,6 @@
 # Equibind score
 
-Equibind score can extract different feature graphs from equibind, then can pass them through a GNN to predict binding affinity (instead of docked pose as in the original equibind).
+Equibind score can extract different feature graphs from equibind, then can pass them through a GNN to predict binding affinity (instead of docked pose as in the original equibind). To read the full write up, see 'Thesis.pdf'.
 
 ### Setup Environment
 

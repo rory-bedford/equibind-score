@@ -22,6 +22,7 @@ def parse_arguments(arglist = None):
     p.add_argument('--type', type=str, default='both', help='ligand, receptor, or both')
     p.add_argument('--batch_size', type=int, default=100, help='batch size for training')
     p.add_argument('--model_output', type=str, default='runs/score/ligand_trained.pt', help='path to .pt file for saving model')
+    p.add_argument('--training_iteration', type=int, default=10, help='number iterations to train for')
 
     cmdline_parser = deepcopy(p)
     args = p.parse_args(arglist)
@@ -84,7 +85,7 @@ loss = nn.MSELoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.0005)
 
 # Training params
-num_epochs = 10
+num_epochs = args.training_iteration
 
 # Info saving
 csv = 'iteration, train, val\n'
